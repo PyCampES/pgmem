@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pgmem"
+version = "0.1.0"
+description = "Postgres binaries distributed as part of this package"
+authors = ["Santiago Fraire Willemoes <santiwilly@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  { include = "pgmem", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+mypy = "^1.9.0"
+pytest = "^8.1.1"
+ipython = "^8.23.0"
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
